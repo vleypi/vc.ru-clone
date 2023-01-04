@@ -8,7 +8,7 @@ const index = ({}) => {
     
     return (
         <MainContainer title='vc.ru'>
-          new
+          subs
         </MainContainer>
     )
 }
