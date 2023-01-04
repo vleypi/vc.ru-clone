@@ -15,15 +15,15 @@ const Navigation: FC = () => {
     const router = useRouter()
 
     const links = [
-        {image: flame, title: 'Популярное',href: '/'},
-        {image: time, title: 'Свежее',href: '/new'},
-        {image: bookmark, title: 'Моя лента',href: '/my'},
-        {image: tape, title: 'Закладки',href: '/bookmarks'},
-        {image: subs, title: 'Подписки',href: '/subs'},
+        {image: flame, title: 'Популярное',href: ['/popular','/']},
+        {image: time, title: 'Свежее',href: ['/new']},
+        {image: bookmark, title: 'Моя лента',href: ['/my']},
+        {image: tape, title: 'Закладки',href: ['/bookmarks']},
+        {image: subs, title: 'Подписки',href: ['/subs']},
     ]
 
     const linksList = links.map((link)=>(
-        <Link href={link.href} className={`${styles.link} ${router.asPath == link.href && styles.active}`} >
+        <Link href={link.href[0]} className={`${styles.link} ${link.href.includes(router.asPath) && styles.active}`} >
             <Image src={link.image} alt={link.title} width={22} height={22}/>
             <span>{link.title}</span>
         </Link>
