@@ -1,0 +1,205 @@
+.header{
+    width: 100%;
+    display: flex;
+    height: 60px;
+    background: #feebef;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+}
+
+.header button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header .logo{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    width: 200px;
+    min-width: 200px;
+}
+
+.header .search{
+    width: 635px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .profile{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 40px;
+    width: 290px;
+    margin-left: 10px;
+}
+
+.header .profileLayout{
+    width: 165px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.logo .menu{
+    cursor: pointer;
+    margin-right: 15px;
+    outline: none;
+}
+
+.logo .logoText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo .logoText span{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.search .searchInput{
+    background: #ffdee5;
+    height: 70%;
+    border: 1px transparent solid;
+    width: 60%;
+    border-radius: 10px;
+    outline: none;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 3px 19px;
+    transition: 0.2s;
+}
+
+.search .searchInput:hover{
+    background: white;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+
+.search .searchInput:focus{
+    background: white;
+    border: 1px rgb(252, 123, 123) solid;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.search .createButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 110px;
+    background: white;
+    height: 65%;
+    border-radius: 10px;
+    padding: 10px 14px; 
+    cursor: pointer;
+    transition: 0.2s;
+    margin-left: 10px;
+}
+
+.search .createButton span{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.search .createButton:hover{
+    background: white;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.search .createButton:active{
+    transform: translateY(1.5px);
+}
+
+.profile .profileAvatar{
+    display: flex;
+    align-items: center;
+}
+
+.profile .profileButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile .profileButton img{
+    width: 100%;
+    height: 100%;
+    margin-right: 5px;
+    transition: 0.2s;
+}
+
+.profile .profileButton img:hover{
+    opacity: 0.9;
+}
+
+.profile .message:hover{
+    opacity: 0.5;
+}
+
+.profile  .notification:hover{
+    opacity: 0.5;
+}
+
+.profile .profileAvatar{
+    position: relative;
+}
+
+.profile .profileAvatar .popupProfile{
+    position: absolute;
+    bottom: -210px;
+    right: 0px;
+    background: white;
+    width: 300px;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.profile .profileAvatar .popupProfile p{
+    font-weight: bold;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.profile .profileAvatar .popupProfile .popupButtons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px; 
+}
+
+.profile .profileAvatar .popupProfile .popupButtons button:nth-child(1){
+    margin-top: 0;
+}
+
+.profile .profileAvatar .popupProfile .popupButtons button{
+    font-size: 17px;
+    text-align: left;
+    height: 40px;
+    margin: 5px 0;
+    border-radius: 8px;
+    padding: 10px 10px;
+    transition: 0.1s;
+}
+
+.profile .profileAvatar .popupProfile .popupButtons button:hover{
+    background: rgb(243, 243, 243);
+}
