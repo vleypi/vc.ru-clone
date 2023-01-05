@@ -15,19 +15,19 @@
     width: 30px;
     min-width: 30px;
     position: -webkit-sticky;
-    position: sticky;
-    top: 200px;
-    right: 20px;
-    height: calc(100vh - 60px);
-   
+    position: fixed;
+    top: 220px;
+    right: 10px;
+    height: 20px;
+    transform: rotate(270deg);
 }
 
 .hidden .title{
     display: flex;
     align-items: center;
-    transform: rotate(270deg);
-    cursor: pointer;
+    
 }
+
 
 .hidden .title p{
     font-size: 19px;
