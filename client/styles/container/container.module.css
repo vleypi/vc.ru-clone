@@ -8,6 +8,8 @@
 
 }
 
-.container .rightBar{
-    width: 340px;
+.container .content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

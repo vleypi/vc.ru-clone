@@ -1,0 +1,12 @@
+.writing{
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+}

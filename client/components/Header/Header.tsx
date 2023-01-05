@@ -9,12 +9,14 @@ import plus from '../../icons/header/plus.png'
 import Link from 'next/link'
 import { useAppDispatch } from '../../hooks/useRedux'
 import { toggleVisibleNavigation } from '../../store/slices/content'
+import { useRouter } from 'next/router'
 
 
 const Header: FC = () => {
 
     const [profile,setProfile] = useState<boolean>(false)
     const dispatch = useAppDispatch()
+    const router = useRouter()
 
     const popup = profile && 
     <div className={styles.popupProfile}>
@@ -48,7 +50,7 @@ const Header: FC = () => {
                 </div>
                 <div className={styles.search}>
                     <input className={styles.searchInput} placeholder="Поиск"/>
-                    <button className={styles.createButton}>
+                    <button className={styles.createButton} onClick={()=>router.push('/writing')}>
                         <Image src={plus} height={12} width={12} alt="plus"/> 
                         <span>Создать</span>
                     </button>

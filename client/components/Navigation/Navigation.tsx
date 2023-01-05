@@ -9,10 +9,12 @@ import bookmark from '../../icons/navigation/bookmark.png'
 import tape from '../../icons/navigation/tape.png'
 import subs from '../../icons/navigation/subs.png'
 import { useRouter } from 'next/router'
+import { useAppSelector } from '../../hooks/useRedux'
 
 const Navigation: FC = () => {
 
     const router = useRouter()
+    const visible = useAppSelector(({content})=>content.visibleNavigation)
 
     const links = [
         {image: flame, title: 'Популярное',href: ['/popular','/']},
@@ -30,9 +32,13 @@ const Navigation: FC = () => {
     ))
 
     return (
-        <div className={styles.navigation}>
-            {linksList}
-        </div>
+        <>
+            {visible &&
+                <div className={styles.navigation}>
+                    {linksList}
+                </div>
+            }
+        </>
     )
 }
 
