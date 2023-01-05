@@ -7,11 +7,14 @@ import notification from '../../icons/header/notification.png'
 import down from '../../icons/header/down.png'
 import plus from '../../icons/header/plus.png'
 import Link from 'next/link'
+import { useAppDispatch } from '../../hooks/useRedux'
+import { toggleVisibleNavigation } from '../../store/slices/content'
 
 
 const Header: FC = () => {
 
     const [profile,setProfile] = useState<boolean>(false)
+    const dispatch = useAppDispatch()
 
     const popup = profile && 
     <div className={styles.popupProfile}>
@@ -27,11 +30,15 @@ const Header: FC = () => {
         setProfile(!profile)
     }
 
+    const toggleMenu = () =>{
+        dispatch(toggleVisibleNavigation())
+    }
+
     return (
         <>
             <div className={styles.header}>
                 <div className={styles.logo}>
-                    <button className={styles.menu}><Image width={22} height={30} alt='menu' src={menu} /></button>
+                    <button className={styles.menu} onClick={toggleMenu}><Image width={22} height={30} alt='menu' src={menu} /></button>
                     <Link href={'/'}>
                         <div className={styles.logoText}>
                             <span>VC</span>
