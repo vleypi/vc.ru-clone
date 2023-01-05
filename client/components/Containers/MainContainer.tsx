@@ -3,6 +3,7 @@ import {FC, ReactNode} from 'react'
 import Header from '../Header/Header';
 import Navigation from '../Navigation/Navigation';
 import styles from '../../styles/container/container.module.css'
+import Comments from '../Comments/Comments';
 
 interface MainContainerProps {
     children: ReactNode;
@@ -22,8 +23,10 @@ const MainContainer: FC<MainContainerProps> = ({title,children}) => {
                 <Header />
                 <div className={styles.flex}>
                     <Navigation />
-                    {children}
-                    <div className={styles.rightBar}></div>
+                    <div className={styles.content}>
+                        {children}
+                    </div>
+                    <Comments />
                 </div>
             </div>
         </>
