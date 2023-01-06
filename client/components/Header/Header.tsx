@@ -49,11 +49,13 @@ const Header: FC = () => {
                     </Link>
                 </div>
                 <div className={styles.search}>
-                    <input className={styles.searchInput} placeholder="Поиск"/>
-                    <button className={styles.createButton} onClick={()=>router.push('/writing')}>
-                        <Image src={plus} height={12} width={12} alt="plus"/> 
-                        <span>Создать</span>
-                    </button>
+                    <div className={styles.searchWrapper}>
+                        <input className={styles.searchInput} placeholder="Поиск"/>
+                        <button className={styles.createButton} onClick={()=>router.push('/writing')}>
+                            <Image src={plus} height={12} width={12} alt="plus"/> 
+                            <span>Создать</span>
+                        </button>
+                    </div>
                 </div>
                 <div className={styles.profile}>
                     <div className={styles.profileLayout}>

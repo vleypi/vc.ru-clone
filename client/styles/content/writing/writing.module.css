@@ -7,12 +7,12 @@
     height: 100%;
     padding: 20px;
     left: 0;
+    min-height: calc(100VH - 60px);
 }
 
 .editor{
     width: 635px;
     min-width: 635px;
-    margin-right: 110px;
     font-size: 17px;
 }
 
@@ -22,7 +22,7 @@
     border: none;
     background: none;
     outline: none;
-    font-size: 34px;
+    font-size: 40px;
     font-weight: bold;
     resize: none;
     color: black;
