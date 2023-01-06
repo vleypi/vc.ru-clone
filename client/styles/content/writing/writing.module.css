@@ -4,9 +4,30 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: calc(100vh - 60px);
+    height: 100%;
     padding: 20px;
-    position: absolute;
     left: 0;
-    z-index: 10;
+}
+
+.editor{
+    width: 635px;
+    min-width: 635px;
+    margin-right: 110px;
+    font-size: 17px;
+}
+
+.editor .title{
+    width: 635px;
+    height: 50px;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 34px;
+    font-weight: bold;
+    resize: none;
+    color: black;
+}
+
+.editor .title::placeholder{
+    color: rgba(0, 0, 0, 0.144);
 }
